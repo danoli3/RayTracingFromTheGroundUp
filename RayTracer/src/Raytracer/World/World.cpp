@@ -1,8 +1,5 @@
 
 // this file contains the definition of the World class
-
-#include "wxraytracer.h"
-
 #include "World.h"
 #include "Constants.h"
 
@@ -38,10 +35,9 @@
 #include "ShadeRec.h"
 #include "Maths.h"
 
-// build functions
+namespace RayTracer {
 
-#include "BuildShadedObjects.cpp"
-
+// build functions now moved to BuildFunctions class
 
 // -------------------------------------------------------------------- default constructor
 
@@ -348,4 +344,10 @@ World::render_display() const
 	else
 		return EVERY_ROW;
 }
+    
+void
+World::build(void) {
+    
+}
 
+}

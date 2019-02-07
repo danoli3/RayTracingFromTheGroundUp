@@ -30,6 +30,8 @@
 #include "RandomNumber.h"
  
 using namespace std;
+using namespace RayTracer;
+namespace RayTracer {
 
 class RenderThread; 	//part of skeleton - wxRaytracer.h
 class Image;
@@ -188,5 +190,6 @@ inline void World::set_rand_seed(int seed)
 {
 	random->set_rand_seed(seed);
 }
-
+    
+}
 #endif
