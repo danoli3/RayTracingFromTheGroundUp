@@ -14,7 +14,7 @@ class World;
 #include "Point3D.h"
 #include "Normal.h"
 #include "Ray.h"
-#include "RGBColor.h"
+#include "RGBColour.h"
 
 class ShadeRec {
 	public:
@@ -28,7 +28,7 @@ class ShadeRec {
 		int					depth;				// recursion depth
 		float				t;					// ray parameter
 		World&				w;					// World reference
-		RGBColor            color;
+		RGBColour            color;
 
 		// changes for MT implementation for the Sampler Problems
 		int					*count;	 // Count pointer to track the number of current sample

@@ -26,7 +26,7 @@ class Ambient: public Light {
 		set_color(const float c);
 		
 		void
-		set_color(const RGBColor& c);
+		set_color(const RGBColour& c);
 		
 		void
 		set_color(const float r, const float g, const float b); 
@@ -34,13 +34,13 @@ class Ambient: public Light {
 		virtual Vector3D								
 		get_direction(ShadeRec& s); 
 		
-		virtual RGBColor
+		virtual RGBColour
 		L(ShadeRec& s);
 	
 	private:
 	
 		float		ls;
-		RGBColor	color;
+		RGBColour	color;
 };
 
 
@@ -64,7 +64,7 @@ Ambient::set_color(const float c) {
 // ------------------------------------------------------------------------------- set_color
 
 inline void
-Ambient::set_color(const RGBColor& c) {
+Ambient::set_color(const RGBColour& c) {
 	color = c;
 }
 

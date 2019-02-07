@@ -19,13 +19,13 @@ class Lambertian: public BRDF {
 		virtual Lambertian*
 		clone(void) const;
 		
-		virtual RGBColor
+		virtual RGBColour
 		f(const ShadeRec& sr, const Vector3D& wo, const Vector3D& wi) const;
 		
-		virtual RGBColor												
+		virtual RGBColour												
 		sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi, float& pdf);
 		
-		virtual RGBColor
+		virtual RGBColour
 		rho(const ShadeRec& sr, const Vector3D& wo) const;
 			
 		void
@@ -35,7 +35,7 @@ class Lambertian: public BRDF {
 		set_kd(const float kd);
 		
 		void
-		set_cd(const RGBColor& c);
+		set_cd(const RGBColour& c);
 		
 		void													
 		set_cd(const float r, const float g, const float b);
@@ -46,13 +46,13 @@ class Lambertian: public BRDF {
 	    float													
 		get_kd() const;
 
-		RGBColor													
+		RGBColour													
 		get_cd() const;
 					
 	private:
 	
 		float		kd;
-		RGBColor 	cd;
+		RGBColour 	cd;
 };
 
 
@@ -78,7 +78,7 @@ Lambertian::set_kd(const float k) {
 // -------------------------------------------------------------- set_cd
 
 inline void
-Lambertian::set_cd(const RGBColor& c) {
+Lambertian::set_cd(const RGBColour& c) {
 	cd = c;
 }
 

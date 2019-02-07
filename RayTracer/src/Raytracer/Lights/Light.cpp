@@ -31,7 +31,7 @@ Light::~Light(void) {}
 // ---------------------------------------------------------------------- L
 // returns the radiance
 
-RGBColor								
+RGBColour								
 Light::L(ShadeRec& s) {
 	return (black);
 }

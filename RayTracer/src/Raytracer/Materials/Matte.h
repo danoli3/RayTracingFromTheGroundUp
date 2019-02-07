@@ -28,7 +28,7 @@ class Matte: public Material {
 		set_kd(const float k);
 		
 		void													
-		set_cd(const RGBColor c);
+		set_cd(const RGBColour c);
 		
 		void													
 		set_cd(const float r, const float g, const float b);
@@ -36,7 +36,7 @@ class Matte: public Material {
 		void																						
 		set_cd(const float c);
 				
-		virtual RGBColor										
+		virtual RGBColour										
 		shade(ShadeRec& sr);
 		
 		void 
@@ -71,7 +71,7 @@ Matte::set_kd (const float kd) {
 // ---------------------------------------------------------------- set_cd
 
 inline void												
-Matte::set_cd(const RGBColor c) {
+Matte::set_cd(const RGBColour c) {
 	ambient_brdf->set_cd(c);
 	diffuse_brdf->set_cd(c);
 }

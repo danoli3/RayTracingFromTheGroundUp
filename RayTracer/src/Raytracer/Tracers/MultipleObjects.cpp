@@ -22,7 +22,7 @@ MultipleObjects::~MultipleObjects(void) {}
 
 // -------------------------------------------------------------------- trace_ray
 
-RGBColor	
+RGBColour	
 MultipleObjects::trace_ray(const Ray& ray) const {
 	ShadeRec sr(world_ptr->hit_objects(ray)); // sr is copy constructed
 		

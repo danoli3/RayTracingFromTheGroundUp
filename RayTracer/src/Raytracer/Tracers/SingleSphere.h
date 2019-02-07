@@ -13,7 +13,7 @@ class SingleSphere: public Tracer {
 		virtual											
 		~SingleSphere(void);
 		
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray& ray) const;
 };
 

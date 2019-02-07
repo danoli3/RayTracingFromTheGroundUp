@@ -61,7 +61,7 @@ Directional::get_direction(ShadeRec& sr) {
 
 // ------------------------------------------------------------------------------  L
 
-RGBColor
+RGBColour
 Directional::L(ShadeRec& s) {	
 	return (ls * color);
 }

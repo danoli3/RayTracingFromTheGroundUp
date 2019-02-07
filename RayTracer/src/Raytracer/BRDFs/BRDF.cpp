@@ -65,7 +65,7 @@ BRDF::set_sampler(Sampler* sPtr) {
 
 // ------------------------------------------------------------------------ f
 
-RGBColor
+RGBColour
 BRDF::f(const ShadeRec& sr, const Vector3D& wo, const Vector3D& wi) const {
 	return (black);
 }
@@ -73,7 +73,7 @@ BRDF::f(const ShadeRec& sr, const Vector3D& wo, const Vector3D& wi) const {
 
 // ------------------------------------------------------------------------ sample_f
 
-RGBColor
+RGBColour
 BRDF::sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi) {
 	return (black);
 }
@@ -81,7 +81,7 @@ BRDF::sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi) {
 
 // ------------------------------------------------------------------------ sample_f
 
-RGBColor
+RGBColour
 BRDF::sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi, float& pdf) {
 	return (black);
 }
@@ -89,7 +89,7 @@ BRDF::sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi, float& pdf) {
 
 // ------------------------------------------------------------------------ rho	
 	
-RGBColor
+RGBColour
 BRDF::rho(const ShadeRec& sr, const Vector3D& wo) const {
 	return (black);
 }

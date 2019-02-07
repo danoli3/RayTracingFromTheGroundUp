@@ -51,7 +51,7 @@ Lambertian::operator= (const Lambertian& rhs) {
 
 // ---------------------------------------------------------------------- f
 
-RGBColor
+RGBColour
 Lambertian::f(const ShadeRec& sr, const Vector3D& wo, const Vector3D& wi) const {
 	return (kd * cd * INV_PI);
 }
@@ -62,7 +62,7 @@ Lambertian::f(const ShadeRec& sr, const Vector3D& wo, const Vector3D& wi) const 
 // this is called in path_shade for any material with a diffuse shading component
 // the samples have to be stored with a cosine distribution
 
-RGBColor
+RGBColour
 Lambertian::sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi, float& pdf) {
 	
 	Vector3D w = sr.normal;
@@ -83,7 +83,7 @@ Lambertian::sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi, float& pdf)
 
 // ---------------------------------------------------------------------- rho
 
-RGBColor
+RGBColour
 Lambertian::rho(const ShadeRec& sr, const Vector3D& wo) const {
 	return (kd * cd);
 }
@@ -94,7 +94,7 @@ Lambertian::get_kd() const {
 	return kd;
 }
 
-RGBColor													
+RGBColour													
 Lambertian::get_cd() const
 {
 	return cd;

@@ -30,7 +30,7 @@ Whitted::~Whitted(void) {}
 
 // -------------------------------------------------------------------- trace_ray
 
-RGBColor	
+RGBColour	
 Whitted::trace_ray(const Ray ray, const int depth) const {
 	if (depth > world_ptr->vp.max_depth)
 		return(black);
@@ -47,7 +47,7 @@ Whitted::trace_ray(const Ray ray, const int depth) const {
 	}																																			
 }
 
-RGBColor	
+RGBColour	
 Whitted::trace_ray(const Ray ray, const int depth, int &count, int &jump) const {
 	if (depth > world_ptr->vp.max_depth)
 		return(black);

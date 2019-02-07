@@ -2,7 +2,7 @@
 #define __MATERIAL__
 
 #include "World.h"			// required for the shade function in all derived classes
-#include "RGBColor.h"
+#include "RGBColour.h"
 #include "ShadeRec.h"
 #include "ReferenceCount.h"
 
@@ -19,7 +19,7 @@ class Material : public ReferenceCount {
 		virtual 								
 		~Material(void);
 				
-		virtual RGBColor
+		virtual RGBColour
 		shade(ShadeRec& sr);	
 		
 	protected:

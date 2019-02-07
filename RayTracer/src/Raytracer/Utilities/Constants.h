@@ -9,7 +9,7 @@
 
 
 #include <stdlib.h>			// for RAND_MAX
-#include "RGBColor.h"
+#include "RGBColour.h"
 
 #define	PI 			3.14159265358979323846f
 #define TWO_PI 		6.28318530717958647692f
@@ -33,14 +33,14 @@ const double	RAD2DEG = 180.0 / PI;
 
 // colors
 
-const RGBColor	black(0.0);
-const RGBColor	white(1.0);
-const RGBColor	red(1.0, 0.0, 0.0);
-const RGBColor	green(0.0, 1.0, 0.0);
-const RGBColor	blue(0.0, 0.0, 1.0);
-const RGBColor	yellow(1.0, 1.0, 0.0);
-const RGBColor	cyan(0.0, 1.0, 1.0);
-const RGBColor	majenta(1.0, 0.0, 1.0);
+const RGBColour	black(0.0);
+const RGBColour	white(1.0);
+const RGBColour	red(1.0, 0.0, 0.0);
+const RGBColour	green(0.0, 1.0, 0.0);
+const RGBColour	blue(0.0, 0.0, 1.0);
+const RGBColour	yellow(1.0, 1.0, 0.0);
+const RGBColour	cyan(0.0, 1.0, 1.0);
+const RGBColour	majenta(1.0, 0.0, 1.0);
 
 
 // legacy constants 

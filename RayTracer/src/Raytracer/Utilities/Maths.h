@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 #include "Constants.h"
-#include "RGBColor.h"
+#include "RGBColour.h"
 #include "MTRand.h"
 
 //static MTRand_int32 mtrand;

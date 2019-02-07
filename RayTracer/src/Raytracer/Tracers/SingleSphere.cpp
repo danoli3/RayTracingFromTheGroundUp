@@ -23,7 +23,7 @@ SingleSphere::~SingleSphere(void) {}
 
 // -------------------------------------------------------------------- trace_ray
 
-RGBColor	
+RGBColour	
 SingleSphere::trace_ray(const Ray& ray) const {
 	ShadeRec	sr(*world_ptr); 	// not used
 	double    	t;  				// not used

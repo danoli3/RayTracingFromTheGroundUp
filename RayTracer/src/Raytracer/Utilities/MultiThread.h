@@ -19,28 +19,33 @@
 //    Daniel Rosser <danoli3@gmail.com> 
 
 #include "Point2D.h"
-#include "RGBColor.h"
+#include "RGBColour.h"
 
 struct RenderedPixel {
   Point2D xy;
-  RGBColor color;
-} ;
+  RGBColour color;
+};
 
 struct RenderedInt {
   int x, y, r, g, b;
-} ;
+};
 
 struct Pixel
 {
 public:
-   Pixel(unsigned short xi, unsigned short yi) : x(xi), y(yi)
-   { }
+   Pixel(unsigned short xi, unsigned short yi)
+    : x(xi), y(yi) {
+   }
 
-   unsigned short x, y;
+   unsigned int x, y;
 };
 
 
-enum RenderDisplay { EVERY_PIXEL, EVERY_ROW, EVERY_JOB };
+enum RenderDisplay {
+    EVERY_PIXEL,
+    EVERY_ROW,
+    EVERY_JOB
+};
 
 
 #endif

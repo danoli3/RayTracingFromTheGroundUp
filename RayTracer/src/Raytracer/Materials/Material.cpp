@@ -30,7 +30,7 @@ Material::~Material(void)
 
 // ---------------------------------------------------------------- shade
 
-RGBColor
+RGBColour
 Material::shade(ShadeRec& sr) {
 	return (black);
 }

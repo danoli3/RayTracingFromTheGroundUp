@@ -2,7 +2,7 @@
 #define __LIGHT__
 
 #include "Vector3D.h"
-#include "RGBColor.h"
+#include "RGBColour.h"
 #include "Ray.h"
 
 #include "ReferenceCount.h"
@@ -32,7 +32,7 @@ class Light : public ReferenceCount {
 		virtual Vector3D								
 		get_direction(ShadeRec& sr) = 0;				
 																
-		virtual RGBColor														
+		virtual RGBColour														
 		L(ShadeRec& sr);								
 };
 

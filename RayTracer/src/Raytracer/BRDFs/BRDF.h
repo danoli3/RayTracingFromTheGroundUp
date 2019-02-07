@@ -12,7 +12,7 @@
 
 //#include <math.h>
 
-#include "RGBColor.h"
+#include "RGBColour.h"
 #include "Vector3D.h"
 #include "ShadeRec.h"
 #include "Sampler.h"
@@ -38,16 +38,16 @@ class BRDF : public ReferenceCount {
 		void							
 		set_sampler(Sampler* sPtr);
 		
-		virtual RGBColor
+		virtual RGBColour
 		f(const ShadeRec& sr, const Vector3D& wo, const Vector3D& wi) const;
 		
-		virtual RGBColor
+		virtual RGBColour
 		sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi);
 		
-		virtual RGBColor
+		virtual RGBColour
 		sample_f(ShadeRec& sr, const Vector3D& wo, Vector3D& wi, float& pdf);
 		
-		virtual RGBColor
+		virtual RGBColour
 		rho(const ShadeRec& sr, const Vector3D& wo) const;
 		
 			

@@ -8,7 +8,7 @@
 
 #include "Constants.h"
 #include "Ray.h"
-#include "RGBColor.h"
+#include "RGBColour.h"
 
 class World;
 
@@ -22,14 +22,14 @@ class Tracer {
 		virtual											
 		~Tracer(void);									
 
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray& ray) const;
 
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray ray, const int depth) const;
 		
 		// Overloaded trace_ray for MT implementation
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray ray, const int depth, int &count, int &jump) const;
 				
 	protected:

@@ -38,11 +38,12 @@ class Pinhole: public Camera {
 		
 		virtual void
 		render_scene(const World& w, const std::vector<Pixel>& pixels);
+    float	zoom;	// zoom factor
 		
 	private:
 			
 		float	d;		// view plane distance
-		float	zoom;	// zoom factor
+		
 		
 };
 
@@ -52,7 +53,7 @@ class Pinhole: public Camera {
 //-------------------------------------------------------------------------- set_vpd
 
 inline void
-Pinhole::set_view_distance(float _d) {
+Pinhole::set_view_distance(const float _d) {
 	d = _d;
 }	
 	

@@ -71,7 +71,7 @@ Pinhole::get_direction(const Point2D& p) const {
 
 void 												
 Pinhole::render_scene(const World& w) {
-	RGBColor	L;
+	RGBColour	L;
 	ViewPlane	vp(w.vp);	 								
 	Ray			ray;
 	int 		depth = 0;  
@@ -103,7 +103,7 @@ Pinhole::render_scene(const World& w) {
 void 																		
 Pinhole::render_scene(const World& w, const std::vector<Pixel>& pixels)
 {
-	RGBColor	L;
+	RGBColour	L;
 	ViewPlane	vp(w.vp);	 								
 	Ray			ray;
 	int 		depth = 0;  // recusrion depth
@@ -124,8 +124,8 @@ Pinhole::render_scene(const World& w, const std::vector<Pixel>& pixels)
 	{			
 		Pixel screen_pixel = pixels[i];
 		L = black; 
-		int sp_count = 0;
-		int sp_jump = 0;
+		//int sp_count = 0;
+		//int sp_jump = 0;
 		for (int p = 0; p < n; p++)	{		// up pixel
 			for (int q = 0; q < n; q++) {	// across pixel	
 				pp.x = vp.s * (screen_pixel.x - 0.5 * vp.hres + (q + 0.5) / n); 
@@ -150,6 +150,7 @@ Pinhole::render_scene(const World& w, const std::vector<Pixel>& pixels)
 		pixel.xy = Point2D(screen_pixel.x,screen_pixel.y);	// "
 		render.push_back(pixel);    // "
 
+        /**
 		if(w.stop_rendering())       // if the program is asked to close, we need end this now
 		{	w.display_pixel(render);  
 				render.clear();	
@@ -173,6 +174,8 @@ Pinhole::render_scene(const World& w, const std::vector<Pixel>& pixels)
 	{	w.display_pixel(render);   // send to the screen buffer every row of pixels rendered
 		render.clear();	
 	}		
+         */
+    }
 }
 
 

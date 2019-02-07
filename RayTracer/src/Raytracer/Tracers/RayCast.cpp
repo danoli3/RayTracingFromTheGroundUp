@@ -24,7 +24,7 @@ RayCast::~RayCast(void) {}
 
 // -------------------------------------------------------------------- trace_ray
 
-RGBColor	
+RGBColour	
 RayCast::trace_ray(const Ray& ray) const {
 	ShadeRec sr(world_ptr->hit_objects(ray));
 		
@@ -40,7 +40,7 @@ RayCast::trace_ray(const Ray& ray) const {
 // -------------------------------------------------------------------- trace_ray
 // this ignores the depth argument
 
-RGBColor	
+RGBColour	
 RayCast::trace_ray(const Ray ray, const int depth) const {
 	ShadeRec sr(world_ptr->hit_objects(ray));
 	if (sr.hit_an_object) {
@@ -51,7 +51,7 @@ RayCast::trace_ray(const Ray ray, const int depth) const {
 		return (world_ptr->background_color);
 }
 
-RGBColor	
+RGBColour	
 RayCast::trace_ray(const Ray ray, const int depth, int &count, int &jump) const {
 	ShadeRec sr(world_ptr->hit_objects(ray));
 	sr.count = &count;

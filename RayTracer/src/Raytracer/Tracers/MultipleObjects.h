@@ -13,7 +13,7 @@ class MultipleObjects: public Tracer {
 		virtual											
 		~MultipleObjects(void);
 						
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray& ray) const;
 };
 

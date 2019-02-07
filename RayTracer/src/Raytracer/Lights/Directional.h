@@ -3,7 +3,7 @@
 
 #include "Light.h"
 #include "Vector3D.h"
-#include "RGBColor.h"
+#include "RGBColour.h"
 
 #include "World.h"			// you will need this later on for shadows
 #include "ShadeRec.h"
@@ -32,7 +32,7 @@ class Directional: public Light {
 		set_color(const float c);
 		
 		void
-		set_color(const RGBColor& c);
+		set_color(const RGBColour& c);
 		
 		void
 		set_color(const float r, const float g, const float b); 		
@@ -46,13 +46,13 @@ class Directional: public Light {
 		virtual Vector3D								
 		get_direction(ShadeRec& sr);
 				
-		virtual RGBColor		
+		virtual RGBColour		
 		L(ShadeRec& sr);	
 		
 	private:
 
 		float		ls;			
-		RGBColor	color;
+		RGBColour	color;
 		Vector3D	dir;		// direction the light comes from
 };
 
@@ -78,7 +78,7 @@ Directional::set_color(const float c) {
 // ------------------------------------------------------------------------------- set_color
 
 inline void
-Directional::set_color(const RGBColor& c) {
+Directional::set_color(const RGBColour& c) {
 	color = c;
 }
 

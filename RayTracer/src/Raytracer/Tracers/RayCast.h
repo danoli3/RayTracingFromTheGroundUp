@@ -13,13 +13,13 @@ class RayCast: public Tracer {
 		virtual											
 		~RayCast(void);		
 
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray& ray) const;
 
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray ray, const int depth) const;
 		
-		virtual RGBColor	
+		virtual RGBColour	
 		trace_ray(const Ray ray, const int depth, int &count, int &jump) const;
 };
 

@@ -58,7 +58,7 @@ Ambient::get_direction(ShadeRec& s) {
 
 // ---------------------------------------------------------------------- L
 
-RGBColor
+RGBColour
 Ambient::L(ShadeRec& sr) {	
 	return (ls * color);
 }

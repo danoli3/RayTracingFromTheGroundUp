@@ -15,7 +15,7 @@
 #include <list>
 
 #include "ViewPlane.h"
-#include "RGBColor.h"
+#include "RGBColour.h"
 #include "Tracer.h"
 #include "GeometricObject.h"
 #include "Sphere.h"
@@ -28,17 +28,18 @@
 #include "Light.h"
 #include "Ambient.h"
 #include "RandomNumber.h"
+//#include "GameLevel.h"
  
 using namespace std;
 
-class RenderThread; 	//part of skeleton - wxRaytracer.h
+//class GameLevel; 	//part of skeleton - wxRaytracer.h
 class Image;
 
 class World {	
 	public:
 	
 		ViewPlane					vp;
-		RGBColor					background_color;
+		RGBColour					background_color;
 		Tracer*						tracer_ptr;
 		Light*   					ambient_ptr;
 		Camera*						camera_ptr;		
@@ -46,7 +47,7 @@ class World {
 		vector<SmartPointer<GeometricObject> > objects;
 		vector<SmartPointer<Light> > 				lights;
 		
-		RenderThread* 				paintArea; 	//connection to skeleton - wxRaytracer.h	
+		//GameLevel* 				paintArea; 	//connection to skeleton - wxRaytracer.h
 		RandomNumber*               random;
 
 	public:
@@ -74,27 +75,32 @@ class World {
 		void 												
 		render_scene(void) const;
 		
+    /**
 		void 												
 		render_scene(const std::vector<Pixel>& pixels) const;
+     
+     */
 						
-		RGBColor
-		max_to_one(const RGBColor& c) const;
+		RGBColour
+		max_to_one(const RGBColour& c) const;
 		
-		RGBColor
-		clamp_to_color(const RGBColor& c) const;
-		
-		void
-		display_pixel(const int row, const int column, const RGBColor& pixel_color) const;
+		RGBColour
+		clamp_to_color(const RGBColour& c) const;
 		
 		void
-		display_pixel(const list<RenderedPixel>& render) const;
+		display_pixel(const int row, const int column, const RGBColour& pixel_color) const;
+		
+		//void
+		//display_pixel(const list<RenderedPixel>& render) const;
+    
+        void render_scene(const Pixel& pixel, RenderedPixel & rendered) const;
 
 		ShadeRec
 		hit_objects(const Ray& ray);
 
-		bool stop_rendering() const;
+		//bool stop_rendering() const;
 
-		RenderDisplay render_display() const;
+		//RenderDisplay render_display() const;
 
 		float 
 		rand_float();
