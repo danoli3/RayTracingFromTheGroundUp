@@ -11,10 +11,10 @@
 #include <numeric>
 #include <iterator>
 
-#include "World.h"
 #include <vector>
-#include "MultiThread.h"
 #include <iterator>
+
+#include "RGBColor.h"
 
 
 class ofApp : public ofBaseApp{
