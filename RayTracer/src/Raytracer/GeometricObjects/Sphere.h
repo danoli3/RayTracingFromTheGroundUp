@@ -5,6 +5,7 @@
 
 #include "GeometricObject.h"
 
+namespace RayTracer {
 //-------------------------------------------------------------------------------- class Sphere
 
 class Sphere: public GeometricObject {	
@@ -65,4 +66,5 @@ Sphere::set_radius(const double r) {
 	radius = r;
 }
 
+}
 #endif

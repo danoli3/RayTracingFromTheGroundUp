@@ -10,6 +10,8 @@
 
 #include "Sampler.h"
 
+namespace RayTracer {
+    
 class Hammersley: public Sampler {
 	public:
 		
@@ -37,5 +39,6 @@ class Hammersley: public Sampler {
 		generate_samples(void);
 };
 
+}
 #endif
 

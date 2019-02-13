@@ -4,6 +4,8 @@
 
 #include "RGBColor.h"
 
+namespace RayTracer {
+
 // -------------------------------------------------------- default constructor
 
 RGBColor::RGBColor(void)
@@ -60,3 +62,4 @@ RGBColor::powc(float p) const {
 	return (RGBColor(pow(r, p), pow(g, p), pow(b, p)));
 }
 
+}

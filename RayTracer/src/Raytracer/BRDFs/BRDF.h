@@ -19,6 +19,8 @@
 #include "ReferenceCount.h"
 #include "SmartPointer.h"
 
+namespace RayTracer {
+
 class BRDF : public ReferenceCount {
 	public:
 	
@@ -56,5 +58,6 @@ class BRDF : public ReferenceCount {
 		SmartPointer<Sampler> sampler_ptr;		// for indirect illumination
 };
 
+}
 #endif
 

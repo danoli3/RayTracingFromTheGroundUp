@@ -2,7 +2,8 @@
 #define __LAMBERTIAN__
 
 #include "BRDF.h"
-
+namespace RayTracer {
+    
 class Lambertian: public BRDF {
 	public:
 	
@@ -98,4 +99,5 @@ Lambertian::set_cd(const float c) {
 	cd.r = c; cd.g = c; cd.b = c;
 }
 
+}
 #endif

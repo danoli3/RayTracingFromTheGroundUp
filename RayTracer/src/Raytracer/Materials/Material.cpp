@@ -1,5 +1,6 @@
 #include "Material.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 
 Material::Material(void) {}
@@ -34,6 +35,12 @@ RGBColor
 Material::shade(ShadeRec& sr) {
 	return (black);
 }
+   
+// ---------------------------------------------------------------- area_light_shade
 
+RGBColor
+Material::area_light_shade(ShadeRec& sr) {
+    return (black);
+}
 
-
+}

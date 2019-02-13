@@ -23,7 +23,8 @@
 //    along with this program. See /LICENSES/gpl-3.0.txt
 //    If not, see <http://www.gnu.org/licenses/>.
 //
-//    Daniel Rosser <danoli3@gmail.com> 
+//    Daniel Rosser <danoli3@gmail.com>
+
 
 // SmartPointer
 template <typename T> class SmartPointer {

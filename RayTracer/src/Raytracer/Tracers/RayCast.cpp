@@ -3,6 +3,7 @@
 #include "ShadeRec.h"
 #include "Material.h"
 
+namespace RayTracer {
 // -------------------------------------------------------------------- default constructor
 
 RayCast::RayCast(void)
@@ -63,4 +64,5 @@ RayCast::trace_ray(const Ray ray, const int depth, int &count, int &jump) const 
 	else
 		return (world_ptr->background_color);
 }
-
+    
+}

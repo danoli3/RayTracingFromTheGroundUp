@@ -7,9 +7,18 @@
 //	This C++ code is licensed under the GNU General Public License Version 2.
 //	See the file COPYING.txt for the full license.
 
-
 #include <stdlib.h>			// for RAND_MAX
 #include "RGBColor.h"
+
+namespace RayTracer {
+    
+#ifdef PI
+#undef PI
+#endif
+    
+#ifdef TWO_PI
+#undef TWO_PI
+#endif
 
 #define	PI 			3.14159265358979323846f
 #define TWO_PI 		6.28318530717958647692f
@@ -50,5 +59,6 @@ const double 	invTWO_PI 	= 0.15915494309189533577;
 const double 	kEpsilon 	= 0.0001; 
 const double	kHugeValue	= 3.402823466e+38;
 
+}
 
 #endif

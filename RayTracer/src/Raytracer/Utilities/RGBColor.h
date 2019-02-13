@@ -1,7 +1,14 @@
 #ifndef __RGB_COLOR__
 #define __RGB_COLOR__
 
+#ifdef __QUICKDRAW__
+#undef __QUICKDRAW__
+#endif
+
+class RGBColor;
+
 // This file contains the declaration of the class RGBColor
+namespace RayTracer {
 
 //------------------------------------------------------------ class RGBColor
 
@@ -158,5 +165,5 @@ operator* (const float a, const RGBColor& c) {
 	return (RGBColor (a * c.r, a * c.g, a * c.b));	
 }
 
-
+}
 #endif

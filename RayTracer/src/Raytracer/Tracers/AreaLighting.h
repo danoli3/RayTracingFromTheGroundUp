@@ -10,6 +10,8 @@
 
 #include "Tracer.h"
 
+namespace RayTracer {
+
 class AreaLighting: public Tracer {
 	public:
 		
@@ -28,4 +30,5 @@ class AreaLighting: public Tracer {
 		
 };
 
+}
 #endif

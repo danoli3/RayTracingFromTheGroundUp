@@ -9,6 +9,9 @@
 #include "ShadeRec.h"
 #include "Material.h"
 
+
+namespace RayTracer {
+class Material;
 // -------------------------------------------------------------------- default constructor
 
 Whitted::Whitted(void)
@@ -63,4 +66,6 @@ Whitted::trace_ray(const Ray ray, const int depth, int &count, int &jump) const 
 		else
 			return (world_ptr->background_color);
 	}																																			
+}
+    
 }

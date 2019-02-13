@@ -2,6 +2,7 @@
 #include "Lambertian.h"
 #include "Constants.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------------- default constructor
 
 Lambertian::Lambertian(void) 
@@ -98,4 +99,6 @@ RGBColor
 Lambertian::get_cd() const
 {
 	return cd;
+}
+
 }

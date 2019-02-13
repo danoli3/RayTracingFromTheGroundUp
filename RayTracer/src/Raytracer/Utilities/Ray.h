@@ -1,9 +1,11 @@
-#ifndef __RAY__
-#define __RAY__
+#ifndef __RAY_H__
+#define __RAY_H__
 
 #include "Point3D.h"
 #include "Vector3D.h"
 
+namespace RayTracer {
+    
 class Ray {
 	public:
 	
@@ -22,4 +24,5 @@ class Ray {
 		~Ray(void);
 };
 
+}
 #endif

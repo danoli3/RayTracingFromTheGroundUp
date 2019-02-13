@@ -9,6 +9,7 @@
 #include "Constants.h"
 #include "Sampler.h"
 
+namespace RayTracer {
 // ------------------------------------------------------------------ default constructor
 	
 Sampler::Sampler(void)						
@@ -431,6 +432,4 @@ Sampler::sample_one_set(ShadeRec& sr) {
 	return(samples[(*sr.count)++ % num_samples]);  
 }
 
-
-
-
+}

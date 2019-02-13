@@ -6,6 +6,7 @@
 
 #include "Jittered.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 	
 Jittered::Jittered(void)							
@@ -74,4 +75,4 @@ Jittered::generate_samples(void) {
 			}		
 }
 
-
+}

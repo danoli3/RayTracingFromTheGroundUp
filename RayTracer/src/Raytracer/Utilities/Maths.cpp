@@ -7,6 +7,8 @@
 #include <math.h>
 #include "Maths.h"
 
+using namespace RayTracer;
+
 /*
  *  Roots3And4.c
  *

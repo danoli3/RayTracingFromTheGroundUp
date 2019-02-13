@@ -4,6 +4,7 @@
 #include "Material.h"
 #include "Lambertian.h"
 
+namespace RayTracer {
 //----------------------------------------------------------------------------- class Matte
 
 class Matte: public Material {	
@@ -100,5 +101,6 @@ Matte::set_sampler(Sampler* sPtr) {
 	ambient_brdf->set_sampler(sPtr);
 	diffuse_brdf->set_sampler(sPtr);
 }
-
+    
+}
 #endif

@@ -21,6 +21,7 @@
 #include "Constants.h"
 #include "MTRand.h"
 
+namespace RayTracer {
 
 class RandomNumber {
 public:	
@@ -162,8 +163,5 @@ RandomNumber::getrand()
         return x;
 }
 
-
-
-
-
+}
 #endif

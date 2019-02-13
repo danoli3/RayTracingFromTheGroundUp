@@ -2,6 +2,7 @@
 
 #include "Camera.h"
 
+namespace RayTracer {
 
 // ----------------------------------------------------------------- default constructor
 
@@ -91,4 +92,4 @@ Camera::compute_uvw(void) {
 	}
 }
 
-
+}

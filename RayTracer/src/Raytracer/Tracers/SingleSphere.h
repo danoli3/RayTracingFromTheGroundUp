@@ -3,6 +3,8 @@
 
 #include "Tracer.h"
 
+namespace RayTracer {
+
 class SingleSphere: public Tracer {
 	public:
 		
@@ -17,4 +19,5 @@ class SingleSphere: public Tracer {
 		trace_ray(const Ray& ray) const;
 };
 
+}
 #endif

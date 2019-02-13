@@ -7,6 +7,7 @@
 #include "Constants.h"
 #include "BRDF.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------- default constructor
 
 BRDF::BRDF(void) 
@@ -94,3 +95,4 @@ BRDF::rho(const ShadeRec& sr, const Vector3D& wo) const {
 	return (black);
 }
 
+}

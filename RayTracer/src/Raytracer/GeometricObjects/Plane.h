@@ -3,6 +3,7 @@
 
 #include "GeometricObject.h"
 
+namespace RayTracer {
 //-------------------------------------------------------------------- class Plane
 
 class Plane: public GeometricObject {
@@ -35,4 +36,5 @@ class Plane: public GeometricObject {
 		static const double kEpsilon;   // for shadows and secondary rays
 };
 
+}
 #endif

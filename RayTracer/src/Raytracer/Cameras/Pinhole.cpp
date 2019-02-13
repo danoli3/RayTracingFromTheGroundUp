@@ -7,6 +7,7 @@
 #include <math.h>
 #include <list>
 
+namespace RayTracer {
 // ----------------------------------------------------------------------------- default constructor
 
 Pinhole::Pinhole(void)		
@@ -150,29 +151,29 @@ Pinhole::render_scene(const World& w, const std::vector<Pixel>& pixels)
 		pixel.xy = Point2D(screen_pixel.x,screen_pixel.y);	// "
 		render.push_back(pixel);    // "
 
-		if(w.stop_rendering())       // if the program is asked to close, we need end this now
-		{	w.display_pixel(render);  
-				render.clear();	
-				return; 	}	
-
-			if(w.render_display() == EVERY_PIXEL)
-			{	w.display_pixel(render);   // send to the screen buffer every pixel rendered
-				render.clear();	
-			}
-			else if(w.render_display() == EVERY_ROW)
-			{	
-				if(i % (pixels.size()/10) == 0)
-				{
-					w.display_pixel(render);   // send to the screen buffer every pixel rendered
-					render.clear();	
-				}
-			}
+//        if(w.stop_rendering())       // if the program is asked to close, we need end this now
+//        {    w.display_pixel(render);
+//                render.clear();
+//                return;     }
+//
+//            if(w.render_display() == EVERY_PIXEL)
+//            {    w.display_pixel(render);   // send to the screen buffer every pixel rendered
+//                render.clear();
+//            }
+//            else if(w.render_display() == EVERY_ROW)
+//            {
+//                if(i % (pixels.size()/10) == 0)
+//                {
+//                    w.display_pixel(render);   // send to the screen buffer every pixel rendered
+//                    render.clear();
+//                }
+//            }
 	}
 
-	if(w.render_display() == EVERY_JOB || w.render_display() == EVERY_ROW)
-	{	w.display_pixel(render);   // send to the screen buffer every row of pixels rendered
-		render.clear();	
-	}		
+//    if(w.render_display() == EVERY_JOB || w.render_display() == EVERY_ROW)
+//    {    w.display_pixel(render);   // send to the screen buffer every row of pixels rendered
+//        render.clear();    
+//    }        
 }
 
-
+}

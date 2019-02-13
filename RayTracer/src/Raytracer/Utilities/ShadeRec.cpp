@@ -9,6 +9,7 @@
 #include "Constants.h"
 #include "ShadeRec.h"
 
+namespace RayTracer {
 // ------------------------------------------------------------------ constructor
 
 ShadeRec::ShadeRec(World& wr)
@@ -43,10 +44,5 @@ ShadeRec::ShadeRec(const ShadeRec& sr)
 		jump(sr.count),
 		sync(false)
 {}
-
-
-
-		
-		
-						
-		
+    
+}

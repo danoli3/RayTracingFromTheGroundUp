@@ -10,7 +10,7 @@
 
 class Material;
 
-
+namespace RayTracer {
 //----------------------------------------------------------------------------------------------------- Class GeometricObject
 
 class GeometricObject : public ReferenceCount {	
@@ -62,4 +62,5 @@ GeometricObject::get_material(void) const {
 	return (material_ptr.get_pointer());
 }
 
+}
 #endif

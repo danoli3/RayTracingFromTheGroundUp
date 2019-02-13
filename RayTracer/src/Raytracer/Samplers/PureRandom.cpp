@@ -6,6 +6,7 @@
 
 #include "PureRandom.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 	
 PureRandom::PureRandom(void)							
@@ -61,4 +62,4 @@ PureRandom::generate_samples(void) {
 			samples.push_back(Point2D(rand_float(), rand_float()));
 }
 
-
+}

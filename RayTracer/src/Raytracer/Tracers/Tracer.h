@@ -10,6 +10,8 @@
 #include "Ray.h"
 #include "RGBColor.h"
 
+namespace RayTracer {
+    
 class World;
 
 class Tracer {
@@ -37,4 +39,5 @@ class Tracer {
 		World* world_ptr;
 };
 
+}
 #endif

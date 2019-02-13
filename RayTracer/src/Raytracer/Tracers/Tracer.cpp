@@ -1,5 +1,6 @@
 #include "Tracer.h"
 
+namespace RayTracer {
 // -------------------------------------------------------------------- default constructor
 
 Tracer::Tracer(void)
@@ -43,7 +44,5 @@ RGBColor
 Tracer::trace_ray(const Ray ray, const int depth, int &count, int &jump) const {
 	return (black);
 }
-
-
-
-
+    
+}

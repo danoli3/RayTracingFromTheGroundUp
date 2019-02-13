@@ -9,9 +9,8 @@
 #include "MultiThread.h"
 #include <vector>
 
-
+namespace RayTracer {
 class World;  // can't #include "World" here because World contains a camera pointer
-
 //--------------------------------------------------------------------- class Camera
 
 class Camera {
@@ -171,4 +170,5 @@ inline void
 Camera::render_stereo(const World& w, float x, int pixel_offset, const std::vector<Pixel>& pixels)
 {}
 
+}
 #endif

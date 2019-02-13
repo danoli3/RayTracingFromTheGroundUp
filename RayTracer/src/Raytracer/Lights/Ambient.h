@@ -3,6 +3,8 @@
 
 #include "Light.h"
 
+namespace RayTracer {
+
 class Ambient: public Light {
 	public:
 	
@@ -43,9 +45,6 @@ class Ambient: public Light {
 		RGBColor	color;
 };
 
-
-
-
 // ------------------------------------------------------------------------------- scale_radiance
 
 inline void
@@ -76,5 +75,5 @@ Ambient::set_color(const float r, const float g, const float b) {
 	color.r = r; color.g = g; color.b = b;
 }
 
-
+}
 #endif

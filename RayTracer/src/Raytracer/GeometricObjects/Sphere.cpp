@@ -3,6 +3,7 @@
 #include "Sphere.h"
 #include "math.h"
 
+namespace RayTracer {
 const double Sphere::kEpsilon = 0.001;
 					
 // ---------------------------------------------------------------- default constructor
@@ -101,9 +102,4 @@ Sphere::hit(const Ray& ray, double& tmin, ShadeRec& sr) const {
 	return (false);
 }
 
-
-
-
-
-
-
+}

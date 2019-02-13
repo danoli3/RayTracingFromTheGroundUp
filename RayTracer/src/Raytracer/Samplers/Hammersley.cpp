@@ -10,6 +10,7 @@
 //extern float 
 //rand_float(void);
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 	
 Hammersley::Hammersley(void)							
@@ -86,4 +87,4 @@ Hammersley::generate_samples(void) {
 		}		
 }
 
-
+}

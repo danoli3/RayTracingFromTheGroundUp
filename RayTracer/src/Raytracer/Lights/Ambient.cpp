@@ -1,6 +1,7 @@
 
 #include "Ambient.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------------- default constructor
 
 Ambient::Ambient (void)
@@ -63,6 +64,4 @@ Ambient::L(ShadeRec& sr) {
 	return (ls * color);
 }
 
-
-
-
+}

@@ -10,6 +10,8 @@
 
 #include "Tracer.h"
 
+namespace RayTracer {
+
 class Whitted: public Tracer {
 	public:
 		
@@ -26,5 +28,6 @@ class Whitted: public Tracer {
 		virtual RGBColor	
 		trace_ray(const Ray ray, const int depth, int &count, int &jump) const;
 };
-
+    
+}
 #endif

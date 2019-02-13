@@ -10,6 +10,8 @@
 
 #include "Sampler.h"
 
+namespace RayTracer {
+    
 class Jittered: public Sampler {
 	public:
 		
@@ -36,5 +38,6 @@ class Jittered: public Sampler {
 		generate_samples(void);
 };
 
+}
 #endif
 

@@ -1,5 +1,6 @@
 #include "Matte.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 
 Matte::Matte (void)
@@ -99,6 +100,5 @@ Matte::shade(ShadeRec& sr) {
 	
 	return (L);
 }
-
-
-
+    
+}

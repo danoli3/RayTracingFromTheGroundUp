@@ -21,6 +21,8 @@
 #include "Point2D.h"
 #include "RGBColor.h"
 
+namespace RayTracer {
+
 struct RenderedPixel {
   Point2D xy;
   RGBColor color;
@@ -42,5 +44,5 @@ public:
 
 enum RenderDisplay { EVERY_PIXEL, EVERY_ROW, EVERY_JOB };
 
-
+}
 #endif

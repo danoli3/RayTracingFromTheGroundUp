@@ -8,6 +8,7 @@
 #include "World.h"			// you will need this later on for shadows
 #include "ShadeRec.h"
 
+namespace RayTracer {
 
 class Directional: public Light {
 	public:
@@ -108,5 +109,5 @@ Directional::set_direction(float dx, float dy, float dz) {
 	dir.normalize();
 }
 
-
+}
 #endif

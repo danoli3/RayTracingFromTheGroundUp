@@ -10,6 +10,7 @@
 
 #include "Sampler.h"
 
+namespace RayTracer {
 class NRooks: public Sampler {
 	public:
 		
@@ -36,5 +37,5 @@ class NRooks: public Sampler {
 		generate_samples(void);						
 };
 
+}
 #endif
-

@@ -9,7 +9,8 @@
 
 
 #include "Sampler.h"
-
+namespace RayTracer {
+    
 class PureRandom: public Sampler {
 	public:
 		
@@ -34,5 +35,6 @@ class PureRandom: public Sampler {
 		generate_samples(void);
 };
 
+}
 #endif
 

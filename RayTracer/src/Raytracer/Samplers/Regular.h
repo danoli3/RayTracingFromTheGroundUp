@@ -9,7 +9,7 @@
 
 
 #include "Sampler.h"
-
+namespace RayTracer {
 class Regular: public Sampler {
 	public:
 		
@@ -31,6 +31,6 @@ class Regular: public Sampler {
 		virtual void
 		generate_samples(void);
 };
-
+}
 #endif
 

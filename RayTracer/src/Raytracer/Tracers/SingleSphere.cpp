@@ -2,6 +2,7 @@
 #include "World.h"
 #include "ShadeRec.h"
 
+namespace RayTracer {
 // -------------------------------------------------------------------- default constructor
 
 SingleSphere::SingleSphere(void)
@@ -34,4 +35,4 @@ SingleSphere::trace_ray(const Ray& ray) const {
 		return (black);   
 }
 
-
+}

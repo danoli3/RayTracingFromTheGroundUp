@@ -2,6 +2,8 @@
 
 #include "Constants.h"
 
+namespace RayTracer {
+
 // ---------------------------------------------------------------------- default constructor
 
 Light::Light(void) {}
@@ -36,4 +38,4 @@ Light::L(ShadeRec& s) {
 	return (black);
 }
 
-
+}

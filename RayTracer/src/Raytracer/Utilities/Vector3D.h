@@ -183,7 +183,6 @@ operator* (const double a, const Vector3D& v) {
 Vector3D 
 operator* (const Matrix& mat, const Vector3D& v);
 
-
 #endif
 
 

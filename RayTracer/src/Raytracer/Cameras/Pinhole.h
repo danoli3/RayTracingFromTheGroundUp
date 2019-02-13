@@ -6,6 +6,7 @@
 #include "Point2D.h"
 #include "World.h"    // we can #include "World.h" here
 
+namespace RayTracer {
 //--------------------------------------------------------------------- class Pinhole
 
 class Pinhole: public Camera {
@@ -65,4 +66,5 @@ Pinhole::set_zoom(float zoom_factor) {
 	zoom = zoom_factor;
 }	
 
+}
 #endif

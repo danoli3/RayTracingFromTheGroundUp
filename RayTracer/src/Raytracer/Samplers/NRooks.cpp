@@ -6,6 +6,7 @@
 
 #include "NRooks.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 	
 NRooks::NRooks(void)							
@@ -74,6 +75,4 @@ NRooks::generate_samples(void) {
 	shuffle_y_coordinates();
 }
 
-
-	
-
+}

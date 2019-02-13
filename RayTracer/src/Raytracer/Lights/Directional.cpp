@@ -1,5 +1,6 @@
 #include "Directional.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------------- default constructor
 
 Directional::Directional(void)
@@ -65,5 +66,5 @@ RGBColor
 Directional::L(ShadeRec& s) {	
 	return (ls * color);
 }
-
-
+    
+}

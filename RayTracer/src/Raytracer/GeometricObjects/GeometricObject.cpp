@@ -4,7 +4,7 @@
 #include "Material.h"
 #include "GeometricObject.h"
 
-
+namespace RayTracer {
 // ---------------------------------------------------------------------- default constructor
 
 
@@ -65,4 +65,4 @@ GeometricObject::add_object(GeometricObject* object_ptr) {}
 void 												
 GeometricObject::add_object(SmartPointer<GeometricObject> object_ptr) {}
 
-								
+}

@@ -8,8 +8,8 @@
 #include "ReferenceCount.h"
 #include "SmartPointer.h"
 
+namespace RayTracer {
 class ShadeRec;
-
 
 //-------------------------------------------------------------------- class Light
 
@@ -35,5 +35,6 @@ class Light : public ReferenceCount {
 		virtual RGBColor														
 		L(ShadeRec& sr);								
 };
-
+    
+}
 #endif

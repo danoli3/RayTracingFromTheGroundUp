@@ -3,6 +3,8 @@
 
 #include "Tracer.h"
 
+namespace RayTracer {
+
 class MultipleObjects: public Tracer {
 	public:
 		
@@ -17,4 +19,5 @@ class MultipleObjects: public Tracer {
 		trace_ray(const Ray& ray) const;
 };
 
+}
 #endif

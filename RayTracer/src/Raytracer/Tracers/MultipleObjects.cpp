@@ -1,6 +1,7 @@
 #include "MultipleObjects.h"
 #include "World.h"
 
+namespace RayTracer {
 // -------------------------------------------------------------------- default constructor
 
 MultipleObjects::MultipleObjects(void)
@@ -32,3 +33,4 @@ MultipleObjects::trace_ray(const Ray& ray) const {
 		return (world_ptr->background_color);
 }
 
+}

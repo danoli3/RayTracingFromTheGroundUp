@@ -6,6 +6,7 @@
 
 #include "MultiJittered.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 	
 MultiJittered::MultiJittered(void)							
@@ -137,4 +138,4 @@ MultiJittered::generate_samples(void) {
 		}
 }
 
-
+}

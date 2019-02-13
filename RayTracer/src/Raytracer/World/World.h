@@ -13,9 +13,9 @@
 
 #include <vector>
 #include <list>
-
 #include "ViewPlane.h"
 #include "RGBColor.h"
+
 #include "Tracer.h"
 #include "GeometricObject.h"
 #include "Sphere.h"
@@ -24,45 +24,80 @@
 #include "MultiThread.h"
 #include "ReferenceCount.h"
 #include "SmartPointer.h"
+//#include "PhotonTrace.h"
+//#include "PhotonMap.h"
+#include "RandomNumber.h"
+
 #include "Camera.h"
 #include "Light.h"
 #include "Ambient.h"
-#include "RandomNumber.h"
+
+//#include "BuildFunctions.h"
  
 using namespace std;
-using namespace RayTracer;
-namespace RayTracer {
 
-class RenderThread; 	//part of skeleton - wxRaytracer.h
+namespace RayTracer {
+//
+//#include <vector>
+//#include <functional>
+//#include <utility>
+//
+//    // warning: very crude and likely with typos / bugs
+//    template<class Sig>
+//    struct Builds{
+//        template<typename Functor>
+//        void operator+=(Functor&& f)
+//        { _funcs.emplace_back(std::forward<Functor>(f)); }
+//        template<class... Args>
+//        void operator()(Args&&... args) const{
+//            for(auto& f : _funcs)
+//                f(args...);
+//        }
+//    private:
+//        std::vector<std::function<Sig>> _funcs;
+//    };
+
+///class RenderThread; 	//part of skeleton - wxRaytracer.h
 class Image;
 
 class World {	
 	public:
 	
 		ViewPlane					vp;
-		RGBColor					background_color;
+		RayTracer::RGBColor					background_color;
 		Tracer*						tracer_ptr;
 		Light*   					ambient_ptr;
 		Camera*						camera_ptr;		
 		Sphere 						sphere;		// for Chapter 3 only
-		vector<SmartPointer<GeometricObject> > objects;
-		vector<SmartPointer<Light> > 				lights;
+		vector<SmartPointer<GeometricObject> >     objects;		
+		vector<SmartPointer<Light> > 		      lights;
+		vector<Image*> 				images;
 		
-		RenderThread* 				paintArea; 	//connection to skeleton - wxRaytracer.h	
-		RandomNumber*               random;
+		//RenderThread* 				paintArea; 	//connection to skeleton - wxRaytracer.h
+		//SmartPointer<PhotonMap>	    photonmap;
+		//PhotonTrace*	photontracer_ptr;
+
+		RandomNumber		*random;
+        //BuildFunctions      build_functions;
+    
+        //Builds<void()> builds;
+
 
 	public:
 		World(void);
 		~World();
-
+								
 		void 
 		add_object(SmartPointer<GeometricObject> object_ptr);
-								
+
 		void 
 		add_object(GeometricObject* object_ptr);
 		
 		void 
 		add_light(Light* light_ptr); 
+
+		void 
+		add_image(Image* image_ptr); 
 		
 		void
 		set_ambient_light(Light* light_ptr);			
@@ -78,25 +113,31 @@ class World {
 		
 		void 												
 		render_scene(const std::vector<Pixel>& pixels) const;
+	
+		void
+		render_scene(const Pixel& pixel, RenderedPixel & rendered) const;
 						
-		RGBColor
-		max_to_one(const RGBColor& c) const;
+		RayTracer::RGBColor
+		max_to_one(const RayTracer::RGBColor& c) const;
 		
-		RGBColor
-		clamp_to_color(const RGBColor& c) const;
+		RayTracer::RGBColor
+		clamp_to_color(const RayTracer::RGBColor& c) const;
 		
 		void
-		display_pixel(const int row, const int column, const RGBColor& pixel_color) const;
-		
+		display_pixel(const int row, const int column, const RayTracer::RGBColor& pixel_color) const;
+
 		void
 		display_pixel(const list<RenderedPixel>& render) const;
 
 		ShadeRec
-		hit_objects(const Ray& ray);
-
-		bool stop_rendering() const;
-
-		RenderDisplay render_display() const;
+		hit_objects(const Ray& ray);	
+//		
+//		void
+//		generate_photonmap();
+//
+//		bool stop_rendering() const;
+//
+//		RenderDisplay render_display() const;
 
 		float 
 		rand_float();
@@ -111,37 +152,42 @@ class World {
 		rand_int(int l, int h);	
 
 		void
-		set_rand_seed(int seed);	
+		set_rand_seed(int seed);		
 						
 	private:
-		
 		void 
 		delete_objects(void);
 		
 		void 
 		delete_lights(void);
+
+		void 
+		delete_images(void);
 };
 
-
 // ------------------------------------------------------------------ add_object
-
 inline void 
 World::add_object(SmartPointer<GeometricObject> object_ptr) {  
 	objects.push_back(object_ptr);	
 
 }
 
+// ------------------------------------------------------------------ add_object
 inline void 
 World::add_object(GeometricObject* object_ptr) {  
 	objects.push_back(object_ptr);	
+
 }
 
-
 // ------------------------------------------------------------------ add_light
-
 inline void 
 World::add_light(Light* light_ptr) {  
 	lights.push_back(light_ptr);
+}
+// ------------------------------------------------------------------ add_light
+inline void 
+World::add_image(Image* image_ptr) {  
+	images.push_back(image_ptr);
 }
 
 // ------------------------------------------------------------------ set_ambient_light

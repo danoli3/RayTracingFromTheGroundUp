@@ -1,5 +1,6 @@
 #include "Plane.h"
 
+namespace RayTracer {
 const double Plane::kEpsilon = 0.001;
 
 // ----------------------------------------------------------------------  default constructor
@@ -79,3 +80,4 @@ Plane::hit(const Ray& ray, double& tmin, ShadeRec& sr) const {
 	return(false);
 }
 
+}

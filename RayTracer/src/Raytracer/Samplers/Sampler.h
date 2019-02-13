@@ -19,6 +19,7 @@
 #include "ReferenceCount.h"
 
 using namespace std;
+namespace RayTracer {
 
 class Sampler : public ReferenceCount {	
 	public:	
@@ -153,6 +154,7 @@ inline unsigned long Sampler::rand_int(int l, int h)
 {
 	return random->rand_int(l, h);
 }
-
+    
+}
 #endif
 

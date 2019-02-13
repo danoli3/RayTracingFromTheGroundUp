@@ -1,5 +1,6 @@
 #include "Ray.h"
 
+namespace RayTracer {
 // ---------------------------------------------------------------- default constructor
 
 Ray::Ray (void)
@@ -39,5 +40,4 @@ Ray::operator= (const Ray& rhs) {
 
 Ray::~Ray (void) {}
 
-
-
+}

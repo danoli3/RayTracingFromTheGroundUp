@@ -9,6 +9,8 @@
 #include "ShadeRec.h"
 #include "Material.h"
 
+namespace RayTracer {
+
 // -------------------------------------------------------------------- default constructor
 
 AreaLighting::AreaLighting(void)
@@ -67,4 +69,6 @@ AreaLighting::trace_ray(const Ray ray, const int depth, int &count, int &jump) c
 		else
 			return (world_ptr->background_color);
 	}																																			
+}
+
 }
